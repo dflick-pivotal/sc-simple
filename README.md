@@ -7,10 +7,10 @@ Simple Spring Cloud app with Eureka and Hystrix support
 - cd sc-simple
 - mvn package
 - cf push -f manifest-services.yml
-- cf cups service-registry -p '{"uri":"http://<EUREKA_ROUTE>"}'
+- cf cups service-registry -p '{"uri":"http://EUREKA_ROUTE"}'
 - cf push -f manifest-apps.yml
 - load circuit-breaker app in browser
-  - insert in the field http://<UI_ROUTE/hystrix.stream>
+  - insert in the field http://UI_ROUTE/hystrix.stream
   - click monitor stream
 - load ui app in browser - you should get: "Hello from: service"
 - stop services app
