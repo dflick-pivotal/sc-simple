@@ -1,0 +1,10 @@
+---
+memory: 384M
+instances: 1
+applications:
+- name: service-registry
+  host: eureka-${random-word}
+  path: sc-simple-eureka/target/sc-simple-eureka-0.0.1-SNAPSHOT.jar
+- name: circuit-breaker
+  host: hystrix-${random-word}
+  path: sc-simple-hystrix/target/sc-simple-hystrix-0.0.1-SNAPSHOT.jar

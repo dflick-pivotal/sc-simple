@@ -1,0 +1,14 @@
+---
+memory: 384M
+instances: 1
+applications:
+- name: ui
+  host: ui-${random-word}
+  path: sc-simple-ui/target/sc-simple-ui-0.0.1-SNAPSHOT.jar
+  services:
+  - service-registry
+- name: service
+  host: service-${random-word}
+  path: sc-simple-service/target/sc-simple-service-0.0.1-SNAPSHOT.jar
+  services:
+  - service-registry
